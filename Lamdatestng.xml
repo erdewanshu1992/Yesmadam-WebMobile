@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- Demo 1: Test Groups (How To Create Groups?) -->
+<suite name="TestNG Group Test" thread-count="4" parallel="methods">
+    <test verbose="2" preserve-order="true" name="C:/Users/Lenovo/IdeaProjects/TestNGGroups">
+        <groups>
+            <run>
+                <include name = "Search">
+                </include>
+            </run>
+        </groups>
+        <classes>
+            <class name="org.testnggroup.TestNG_SearchGroup">
+            </class>
+        </classes>
+    </test>
+</suite>

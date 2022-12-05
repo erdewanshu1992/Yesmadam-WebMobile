@@ -1,0 +1,56 @@
+//	WebDriver driver;
+//	LoginPage lp;
+//	HomePage hp;
+//	ServicePage sp;
+//	CartPage cp;
+//
+//	@BeforeTest
+//	public void browserlaunch() throws InterruptedException, MalformedURLException {
+//
+//		UiAutomator2Options options = new UiAutomator2Options();
+//		options.setDeviceName("vivo");
+//		options.setChromedriverExecutable("/home/yesmadam/Desktop/Drivers/chromedriver");//
+//		options.setCapability("browserName", "Chrome");
+//		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+//		// driver.get("http://api-stage-aws.yesmadam.co.in/");
+//		driver.get("https://www.yesmadam.com/");
+//		Thread.sleep(5000);
+//		System.out.println(driver.getTitle());
+//		System.out.println("We are currently on the following URL" + driver.getCurrentUrl());
+//		Assert.assertEquals("Yes Madam - Salon at Home | Beauty Parlour Services at Home", driver.getTitle());
+//
+//		// driver =
+//		// Browser.StartBrowser("Chrome","http://api-stage-aws.yesmadam.co.in/");
+//		Thread.sleep(3000);
+//		lp = new LoginPage(driver);
+//		hp = new HomePage(driver);
+//		sp = new ServicePage(driver);
+//		cp = new CartPage(driver);
+
+@Test(priority = 17)
+
+	public void PrimeTimeSlotsMorVerify(String browsername) throws InterruptedException {
+		// If the Slot is Prime Slot at Morning
+		if (browsername.equalsIgnoreCase("PrimeSlotMor")) {
+			sps.PrimeTimeSlotsMorVerify();
+			Thread.sleep(5000);
+		}
+
+		// If the Slot is Normal Slot
+		else if (browsername.equalsIgnoreCase("NormalSlot")) {
+			sps.NormalSlotsVerify();
+			Thread.sleep(5000);
+
+		}
+		// If the Slot is Prime Slot At Evening
+		else if (browsername.equalsIgnoreCase("PrimeSlotEve")) {
+			sps.PrimeTimeSlotsEveVerify();
+			Thread.sleep(5000);
+		}
+
+
+
+
+//
+//	}
